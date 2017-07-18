@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RealtiveLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/viewBg"
-    app:layout_behaviour="@string/appbar_scrolling_view_behaviour"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.nabwera.filamuapp.DetailActivity"
     tools:showIn="@layout/activity_detail">
 
@@ -109,4 +109,4 @@
     </ScrollView>
 
 
-</RealtiveLayout>
+</RelativeLayout>
