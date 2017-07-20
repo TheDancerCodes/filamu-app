@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         adapter.notifyDataSetChanged();
 
         // Loading JSON
-        loadJSON();
+        checkSortOrder();
     }
 
     // Handling the loading of JSON
