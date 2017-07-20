@@ -48,7 +48,7 @@ public class DetailActivity extends AppCompatActivity {
             String thumbnail = getIntent().getExtras().getString("poster_path");
             String movieName = getIntent().getExtras().getString("original_title");
             String synopsis = getIntent().getExtras().getString("overview");
-            String rating = getIntent().getExtras().getString("voter_average");
+            String rating = getIntent().getExtras().getString("vote_average");
             String dateOfRelease = getIntent().getExtras().getString("release_date");
 
             // Setting up data [Strings] to appropriate views.
