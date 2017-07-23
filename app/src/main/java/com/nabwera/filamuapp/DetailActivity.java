@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.nabwera.filamuapp.adapter.TrailerAdapter;
 import com.nabwera.filamuapp.api.Client;
 import com.nabwera.filamuapp.api.Service;
 import com.nabwera.filamuapp.model.Trailer;
