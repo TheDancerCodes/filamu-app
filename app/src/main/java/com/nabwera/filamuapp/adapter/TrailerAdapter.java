@@ -67,9 +67,11 @@ public class TrailerAdapter extends RecyclerView.Adapter<TrailerAdapter.MyViewHo
                     if (pos != RecyclerView.NO_POSITION){
                         Trailer clickedDataItem = trailerList.get(pos);
                         String videoId = trailerList.get(pos).getKey();
-                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:"+videoId));
+                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v="+videoId));
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         intent.putExtra("VIDEO_ID", videoId);
                         mContext.startActivity(intent);
+
                         Toast.makeText(v.getContext(), "You clicked " + clickedDataItem.getName(), Toast.LENGTH_SHORT).show();
 
                     }
