@@ -106,7 +106,7 @@ public class DetailActivity extends AppCompatActivity {
                             editor.commit();
 
                             // method that saves metadata of the movie to the sqlite db
-                            saveFavorite();
+                            // saveFavorite();
                             Snackbar.make(buttonView, "Added to Favorite",
                                     Snackbar.LENGTH_SHORT).show();
                         }else{
