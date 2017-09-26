@@ -56,7 +56,7 @@ public class FavoriteDbHelper extends SQLiteOpenHelper {
                 FavoriteContract.FavoriteEntry.COLUMN_POSTER_PATH + " TEXT NOT NULL, " +
                 FavoriteContract.FavoriteEntry.COLUMN_PLOT_SYNOPSIS + " TEXT NOT NULL, " +
                 "); ";
-        sqLiteDatabase.execSQL(SQL_CREATE_FAVORITE_TABLE);
+            sqLiteDatabase.execSQL(SQL_CREATE_FAVORITE_TABLE);
     }
 
     @Override
