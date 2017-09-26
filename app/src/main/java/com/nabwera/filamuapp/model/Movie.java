@@ -57,6 +57,12 @@ public class Movie {
         this.video = video;
         this.voteAverage = voteAverage;
     }
+
+    // Empty Movie Constructor
+    public Movie(){
+
+    }
+
     String baseImageUrl = "https://image.tmdb.org/t/p/w500";
  
     public String getPosterPath() {
