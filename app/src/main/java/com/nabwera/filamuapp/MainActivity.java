@@ -16,11 +16,13 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.nabwera.filamuapp.adapter.MoviesAdapter;
+import com.nabwera.filamuapp.adapter.TestAdapter;
 import com.nabwera.filamuapp.api.Client;
 import com.nabwera.filamuapp.api.Service;
 import com.nabwera.filamuapp.data.FavoriteDbHelper;
@@ -53,6 +55,14 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         setContentView(R.layout.activity_main);
 
         initViews();
+
+        // The test will be pointed to this particular RecyclerView
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+
+        // For testing the recipe collection sorting alphabetically
+        TestAdapter testAdapter = new TestAdapter(LayoutInflater.from(this));
+        recyclerView.setAdapter(testAdapter);
+        testAdapter.setMovie(movieList);
 
     }
 
