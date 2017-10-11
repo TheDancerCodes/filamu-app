@@ -78,9 +78,12 @@ public class DetailActivity extends AppCompatActivity {
             String rating = getIntent().getExtras().getString("vote_average");
             String dateOfRelease = getIntent().getExtras().getString("release_date");
 
+            // Specify thumbnail width size
+            String poster = "https://image.tmdb.org/t/p/w500" + thumbnail;
+
             // Setting up data [Strings] to appropriate views.
             Glide.with(this)
-                    .load(thumbnail)
+                    .load(poster)
                     .placeholder(R.drawable.load)
                     .into(imageView);
 

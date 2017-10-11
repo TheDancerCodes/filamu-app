@@ -62,11 +62,9 @@ public class Movie {
     public Movie(){
 
     }
-
-    String baseImageUrl = "https://image.tmdb.org/t/p/w500";
  
     public String getPosterPath() {
-        return "https://image.tmdb.org/t/p/w500" + posterPath;
+        return posterPath;
     }
 
     public void setPosterPath(String posterPath) {
