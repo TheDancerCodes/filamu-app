@@ -28,6 +28,7 @@ import com.nabwera.filamuapp.model.Movie;
 import com.nabwera.filamuapp.model.MoviesResponse;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import retrofit2.Call;
@@ -146,6 +147,10 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
                 @Override
                 public void onResponse(Call<MoviesResponse> call, Response<MoviesResponse> response) {
                     List<Movie> movies = response.body().getResults();
+
+                    // Call up Collections to implement sorting of the list items.
+                    Collections.sort(movies, Movie.BY_NAME_ALPHABETICAL);
+
                     recyclerView.setAdapter(new MoviesAdapter(getApplicationContext(), movies));
                     recyclerView.smoothScrollToPosition(0);
                     if (swipeContainer.isRefreshing()) {

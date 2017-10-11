@@ -3,6 +3,7 @@ package com.nabwera.filamuapp.model;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -62,6 +63,15 @@ public class Movie {
     public Movie(){
 
     }
+
+    // Create Comparator -> A function that imposes total ordering on some collections of objects
+    public static final Comparator<Movie> BY_NAME_ALPHABETICAL = new Comparator<Movie>() {
+        @Override
+        public int compare(Movie o1, Movie o2) {
+            return o1.originalTitle.compareTo(o2.originalTitle);
+        }
+    };
+
  
     public String getPosterPath() {
         return posterPath;
