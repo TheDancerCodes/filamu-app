@@ -136,13 +136,13 @@ public class DetailActivity extends AppCompatActivity {
 
         // A background call
         try{
-            if (BuildConfig.THE_MOVIE_DB_API_TOKEN.isEmpty()){
+            if (BuildConfig.THE_MOVIE_DB_API_KEY.isEmpty()){
                 Toast.makeText(getApplicationContext(), "Please obtain your API Key from themoviedb.org", Toast.LENGTH_SHORT).show();
                 return;
             }
             Client Client = new Client();
             Service apiService = Client.getClient().create(Service.class);
-            Call<TrailerResponse> call = apiService.getMovieTrailer(movie_id, BuildConfig.THE_MOVIE_DB_API_TOKEN);
+            Call<TrailerResponse> call = apiService.getMovieTrailer(movie_id, BuildConfig.THE_MOVIE_DB_API_KEY);
             call.enqueue(new Callback<TrailerResponse>() {
                 @Override
                 public void onResponse(Call<TrailerResponse> call, Response<TrailerResponse> response) {

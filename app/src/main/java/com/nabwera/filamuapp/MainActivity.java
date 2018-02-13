@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     private void loadJSON(){
 
         try {
-            if (BuildConfig.THE_MOVIE_DB_API_TOKEN.isEmpty()){
+            if (BuildConfig.THE_MOVIE_DB_API_KEY.isEmpty()){
                 Toast.makeText(getApplicationContext(), "Please obtain API Key from themoviedb.org", Toast.LENGTH_SHORT).show();
                 pd.dismiss();
                 return;
@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
             Client Client = new Client();
             Service apiService =
                     Client.getClient().create(Service.class);
-            Call<MoviesResponse> call = apiService.getPopularMovies(BuildConfig.THE_MOVIE_DB_API_TOKEN);
+            Call<MoviesResponse> call = apiService.getPopularMovies(BuildConfig.THE_MOVIE_DB_API_KEY);
             call.enqueue(new Callback<MoviesResponse>() {
                 @Override
                 public void onResponse(Call<MoviesResponse> call, Response<MoviesResponse> response) {
@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
     private void loadJSON1(){
 
         try {
-            if (BuildConfig.THE_MOVIE_DB_API_TOKEN.isEmpty()){
+            if (BuildConfig.THE_MOVIE_DB_API_KEY.isEmpty()){
                 Toast.makeText(getApplicationContext(), "Please obtain API Key from themoviedb.org", Toast.LENGTH_SHORT).show();
                 pd.dismiss();
                 return;
@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
             Client Client = new Client();
             Service apiService =
                     Client.getClient().create(Service.class);
-            Call<MoviesResponse> call = apiService.getTopRatedMovies(BuildConfig.THE_MOVIE_DB_API_TOKEN);
+            Call<MoviesResponse> call = apiService.getTopRatedMovies(BuildConfig.THE_MOVIE_DB_API_KEY);
             call.enqueue(new Callback<MoviesResponse>() {
                 @Override
                 public void onResponse(Call<MoviesResponse> call, Response<MoviesResponse> response) {
